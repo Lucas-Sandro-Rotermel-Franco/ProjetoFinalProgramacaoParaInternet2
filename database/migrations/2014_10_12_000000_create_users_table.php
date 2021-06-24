@@ -21,6 +21,14 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+            $table->string('matricula');
+            $table->string('nacionalidade');
+            $table->date('data_nascimento');
+            $table->string('sexo');
+            $table->string('raca');
+            $table->bigInteger('forma_ingresso_id');
+            $table->bigInteger('curso_id');
+            $table->string('status');
         });
     }
 
