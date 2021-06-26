@@ -21,14 +21,14 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
-            $table->string('matricula');
-            $table->string('nacionalidade');
-            $table->date('data_nascimento');
-            $table->string('sexo');
-            $table->string('raca');
-            $table->bigInteger('forma_ingresso_id');
-            $table->bigInteger('curso_id');
-            $table->string('status');
+            $table->string('matricula')->nullable();
+            $table->string('nacionalidade')->nullable();
+            $table->date('data_nascimento')->nullable();
+            $table->string('sexo')->nullable();
+            $table->string('raca')->nullable();
+            $table->bigInteger('forma_ingresso_id')->nullable();
+            $table->bigInteger('curso_id')->nullable();
+            $table->string('status')->nullable();
         });
     }
 
