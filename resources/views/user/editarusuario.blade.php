@@ -1,4 +1,4 @@
-@extends('layouts.app', ["current" => "user/usuarios"])
+@extends('layouts.app', ["current" => "usuarios"])
 @section('body')
 <div class="card border">
     <div class="card-body">
@@ -6,6 +6,9 @@
             @csrf
             @method('PUT')
             <div class="form-group">
+                <label for="nameUsuario">Nome</label>
+                <input type="text" class="form-control" name="nameUsuario" id="nameUsuario" placeholder="Usuario">
+
                 <label for="matriculaUsuario">Matricula</label>
                 <input type="text" class="form-control" name="matriculaUsuario" id="matriculaUsuario" placeholder="Usuario">
 
@@ -32,9 +35,6 @@
 
                 <label for="statusUsuario">Status</label>
                 <input type="text" class="form-control" name="statusUsuario" id="statusUsuario" placeholder="Usuario">
-
-                <label for="senhaUsuario">Senha</label>
-                <input type="text" class="form-control" name="senhaUsuario" id="senhaUsuario" placeholder="Usuario">
             </div>
             <button type="submit" class="btn btn-primary btn-sm">Salvar</button>
             <a href="/usuarios" class="btn btn-danger btn-sm">Cancelar</a>

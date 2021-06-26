@@ -10,7 +10,8 @@
         <table class="table table-ordered table-hover">
             <thead>
                 <tr>
-                    <th>Mátricula</th>
+                    <th>Nome</th>
+                    <th>Matricula</th>
                     <th>Nacionalidade</th>
                     <th>Data_Nascimento</th>
                     <th>Email</th>
@@ -25,6 +26,7 @@
             <tbody>
                 @foreach($usuarios as $user)
                 <tr>
+                    <td>{{$user->name}}</td>
                     <td>{{$user->matricula}}</td>
                     <td>{{$user->nacionalidade}}</td>
                     <td>{{$user->data_nascimento}}</td>
@@ -49,8 +51,5 @@
         </table>
         @endif
     </div>
-</div>
-<div class="card-footer">
-    <a href="/usuarios/create" class="btn bt-sm btn-primary" role="button">Novo usuário</a>
 </div>
 @endsection

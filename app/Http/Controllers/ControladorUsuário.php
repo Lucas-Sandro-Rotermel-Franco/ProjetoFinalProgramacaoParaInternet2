@@ -18,12 +18,13 @@ class ControladorUsuário extends Controller
 
     public function create()
     {
-        return view('novousuario');
+        return view('user/novousuario');
     }
 
     public function store(Request $request)
     {
         $usuario = new User();
+        $usuario->name = $request->input('nameUsuario');
         $usuario->matricula = $request->input('matriculaUsuario');
         $usuario->nacionalidade = $request->input('nacionalidadeUsuario');
         $usuario->data_nascimento = $request->input('data_nascimentoUsuario');
@@ -33,11 +34,10 @@ class ControladorUsuário extends Controller
         $usuario->forma_ingresso_id = $request->input('forma_ingresso_idUsuario');
         $usuario->curso_id = $request->input('curso_idUsuario');
         $usuario->status = $request->input('statusUsuario');
-        $usuario->senha = $request->input('senhaUsuario');
 
         $usuario->save();
 
-        return redirect('user/usuarios');
+        return redirect('usuarios');
     }
 
     public function edit($id)
@@ -45,10 +45,10 @@ class ControladorUsuário extends Controller
         $usuario = User::find($id);
         if (isset($usuario))
         {
-            return view('editarusuario', compact('usuario'));
+            return view('user/editarusuario', compact('usuario'));
         }
 
-        return redirect('user/usuarios');
+        return redirect('/usuarios');
     }
 
     public function update(Request $request, $id)
@@ -56,6 +56,7 @@ class ControladorUsuário extends Controller
         $usuario = User::find($id);
         if (isset($usuario))
         {
+            $usuario->name = $request->input('nameUsuario');
             $usuario->matricula = $request->input('matriculaUsuario');
             $usuario->nacionalidade = $request->input('nacionalidadeUsuario');
             $usuario->data_nascimento = $request->input('data_nascimentoUsuario');
@@ -65,12 +66,11 @@ class ControladorUsuário extends Controller
             $usuario->forma_ingresso_id = $request->input('forma_ingresso_idUsuario');
             $usuario->curso_id = $request->input('curso_idUsuario');
             $usuario->status = $request->input('statusUsuario');
-            $usuario->senha = $request->input('senhaUsuario');
 
             $usuario->save();
         }
 
-        return redirect('user/usuarios');
+        return redirect('usuarios');
     }
 
     public function destroy($id)
@@ -81,7 +81,7 @@ class ControladorUsuário extends Controller
             $usuario->delete();
         }
 
-        return redirect('user/usuarios');
+        return redirect('usuarios');
     }
 
     public static function getCourseName($id)
