@@ -34,7 +34,7 @@
                             <a class="nav-link" href="/cursos">Cursos</a>
                         </li>
                         <li>
-                            <a class="nav-link" href="/categorias">Forma ingresso </a>
+                            <a class="nav-link" href="/formas-ingresso">Forma ingresso </a>
                         </li>
                     </ul>
                     <!-- Right Side Of Navbar -->

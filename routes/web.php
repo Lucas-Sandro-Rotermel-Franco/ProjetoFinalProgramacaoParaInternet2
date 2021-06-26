@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\ControladorUsuário;
-use App\Http\Controllers\ControladorCurso;
+use App\Http\Controllers\ControladorCursos;
 use App\Http\Controllers\ControladorFormaIngresso;
 use Illuminate\Support\Facades\Route;
 
@@ -25,7 +25,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::resource('/usuarios', ControladorUsuário::class);
 Route::resource('/usuarios/novo', ControladorUsuário::class);
-Route::resource('/cursos', ControladorCurso::class);
-Route::resource('/cursos/novo', ControladorCurso::class);
-Route::resource('/forma-ingresso', ControladorFormaIngresso::class);
-Route::resource('/forma-ingresso/novo', ControladorFormaIngresso::class);
+Route::resource('/cursos', ControladorCursos::class);
+Route::resource('/cursos/novo', ControladorCursos::class);
+Route::resource('/formas-ingresso', ControladorFormaIngresso::class);
+Route::resource('/formas-ingresso/novo', ControladorFormaIngresso::class);

@@ -24,7 +24,7 @@ class ControladorCursos extends Controller
         $curso = new cursos();
         $curso->curso = $request->input('cursoName');
         $curso->coordenador = $request->input('coordenadorCurso');
-        $curso->ano_criacao = $request->input('ano_criacaoCurso');
+        $curso->data_criacao = $request->input('data_criacaoCurso');
 
         $curso->save();
 
@@ -49,7 +49,7 @@ class ControladorCursos extends Controller
         {
             $curso->curso = $request->input('cursoName');
             $curso->coordenador = $request->input('coordenadorCurso');
-            $curso->ano_criacao = $request->input('ano_criacaoCurso');
+            $curso->data_criacao = $request->input('data_criacaoCurso');
 
             $curso->save();
         }

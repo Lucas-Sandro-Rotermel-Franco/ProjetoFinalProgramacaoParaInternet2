@@ -12,8 +12,8 @@
                 <label for="coordenadorCurso">Coordenador</label>
                 <input type="text" class="form-control" name="coordenadorCurso" id="coordenadorCurso" placeholder="Coordenador">
 
-                <label for="ano_criacaoCurso">Ano_Criação</label>
-                <input type="text" class="form-control" name="ano_criacaoCurso" id="ano_criacaoCurso" placeholder="Ano de criação">
+                <label for="data_criacaoCurso">Data de Criação</label>
+                <input type="text" class="form-control" name="data_criacaoCurso" id="data_criacaoCurso" placeholder="Data de criação">
             </div>
             <button type="submit" class="btn btn-primary btn-sm">Salvar</button>
             <a href="/cursos" class="btn btn-danger btn-sm">Cancelar</a>

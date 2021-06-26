@@ -15,7 +15,7 @@
                 <label for="nacionalidadeUsuario">Nacionalidade</label>
                 <input type="text" class="form-control" name="nacionalidadeUsuario" id="nacionalidadeUsuario" placeholder="Nacionalidade">
 
-                <label for="data_nascimentoUsuario">Data_Nascimento</label>
+                <label for="data_nascimentoUsuario">Data de Nascimento</label>
                 <input type="text" class="form-control" name="data_nascimentoUsuario" id="data_nascimentoUsuario" placeholder="Data de nascimento">
 
                 <label for="emailUsuario">Email</label>
@@ -27,7 +27,7 @@
                 <label for="racaUsuario">Raça</label>
                 <input type="text" class="form-control" name="racaUsuario" id="racaUsuario" placeholder="Raça">
 
-                <label for="forma_ingresso_idUsuario">Forma_Ingresso</label>
+                <label for="forma_ingresso_idUsuario">Forma de Ingresso</label>
                 <input type="text" class="form-control" name="forma_ingresso_idUsuario" id="forma_ingresso_idUsuario" placeholder="Forma de ingresso">
 
                 <label for="curso_idUsuario">Curso</label>

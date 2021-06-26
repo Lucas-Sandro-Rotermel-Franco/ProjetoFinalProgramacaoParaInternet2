@@ -13,11 +13,11 @@
                     <th>Nome</th>
                     <th>Matricula</th>
                     <th>Nacionalidade</th>
-                    <th>Data_Nascimento</th>
+                    <th>Data de Nascimento</th>
                     <th>Email</th>
                     <th>Sexo</th>
                     <th>Raça</th>
-                    <th>Forma_Ingresso</th>
+                    <th>Forma de Ingresso</th>
                     <th>Curso</th>
                     <th>Status</th>
                     <th>Ações</th>

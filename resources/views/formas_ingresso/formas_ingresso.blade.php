@@ -1,6 +1,6 @@
-<?php use App\Http\Controllers\ControladorUsuário; ?>
+<?php use App\Http\Controllers\ControladorFormaIngresso; ?>
 
-@extends('layout.app', ["current" => "formas_ingresso/formas_ingresso"])
+@extends('layouts.app', ["current" => "formas_ingresso/formas_ingresso"])
 
 @section('body')
 <div class="card border">
@@ -10,8 +10,8 @@
         <table class="table table-ordered table-hover">
             <thead>
                 <tr>
-                    <th>Forma_ingresso</th>
-                    <th>Data_implementação</th>
+                    <th>Forma de ingresso</th>
+                    <th>Data de implementação</th>
                     <th>Ações</th>
                 </tr>
             </thead>
@@ -21,9 +21,9 @@
                     <td>{{$forma_ingresso->forma_ingresso}}</td>
                     <td>{{$forma_ingresso->data_implementacao}}</td>
                     <td>
-                        <a href="{{ route('formas_ingresso.edit', $forma_ingresso['id']) }}" class="btn btn-sm btn-primary">Editar</a>
+                        <a href="{{ route('formas-ingresso.edit', $forma_ingresso['id']) }}" class="btn btn-sm btn-primary">Editar</a>
 
-                        <form action="{{ route('formas_ingresso.destroy', $forma_ingresso['id']) }}" method="POST">
+                        <form action="{{ route('formas-ingresso.destroy', $forma_ingresso['id']) }}" method="POST">
                             @csrf
                             @method('DELETE')
                             <input type="submit" class="btn btn-sm btn-danger" value="Apagar">
@@ -35,5 +35,8 @@
         </table>
         @endif
     </div>
+</div>
+<div class="card-footer">
+    <a href="/formas-ingresso/create" class="btn bt-sm btn-primary" style="background-color: #32a055;" role="button">Nova forma de ingresso</a>
 </div>
 @endsection

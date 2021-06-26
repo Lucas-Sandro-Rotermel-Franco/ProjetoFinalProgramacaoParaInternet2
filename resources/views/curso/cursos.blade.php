@@ -1,4 +1,4 @@
-<?php use App\Http\Controllers\ControladorUsuário; ?>
+<?php use App\Http\Controllers\ControladorCursos; ?>
 
 @extends('layouts.app', ["current" => "curso/cursos"])
 
@@ -12,7 +12,7 @@
                 <tr>
                     <th>Curso</th>
                     <th>Coordenador</th>
-                    <th>Ano_Criação</th>
+                    <th>Data de Criação</th>
                     <th>Ações</th>
                 </tr>
             </thead>
@@ -21,7 +21,7 @@
                 <tr>
                     <td>{{$curso->curso}}</td>
                     <td>{{$curso->coordenador}}</td>
-                    <td>{{$curso->ano_criacao}}</td>
+                    <td>{{$curso->data_criacao}}</td>
                     <td>
                         <a href="{{ route('cursos.edit', $curso['id']) }}" class="btn btn-sm btn-primary">Editar</a>
 
@@ -37,5 +37,8 @@
         </table>
         @endif
     </div>
+</div>
+<div class="card-footer">
+    <a href="/cursos/create" class="btn bt-sm btn-primary" style="background-color: #32a055;" role="button">Novo curso</a>
 </div>
 @endsection
