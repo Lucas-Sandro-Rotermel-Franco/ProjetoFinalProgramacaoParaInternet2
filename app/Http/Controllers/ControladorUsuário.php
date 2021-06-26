@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\Models\Course;
-use App\Models\TicketForm;
+use App\Models\cursos;
+use App\Models\formas_ingresso;
 
 class ControladorUsuário extends Controller
 {
@@ -13,7 +13,7 @@ class ControladorUsuário extends Controller
     {
         $usuarios = User::all();
 
-        return view('usuarios', compact('usuarios'));
+        return view('user/usuarios', compact('usuarios'));
     }
 
     public function create()
@@ -37,7 +37,7 @@ class ControladorUsuário extends Controller
 
         $usuario->save();
 
-        return redirect('/usuarios');
+        return redirect('user/usuarios');
     }
 
     public function edit($id)
@@ -48,7 +48,7 @@ class ControladorUsuário extends Controller
             return view('editarusuario', compact('usuario'));
         }
 
-        return redirect('/usuarios');
+        return redirect('user/usuarios');
     }
 
     public function update(Request $request, $id)
@@ -70,7 +70,7 @@ class ControladorUsuário extends Controller
             $usuario->save();
         }
 
-        return redirect('/usuarios');
+        return redirect('user/usuarios');
     }
 
     public function destroy($id)
@@ -81,7 +81,7 @@ class ControladorUsuário extends Controller
             $usuario->delete();
         }
 
-        return redirect('/usuarios');
+        return redirect('user/usuarios');
     }
 
     public static function getCourseName($id)
@@ -89,7 +89,7 @@ class ControladorUsuário extends Controller
         $usuario = User::find($id);
         if (isset($usuario))
         {
-            $curso = Course::find($curso['curso_id']);
+            $curso = cursos::find($usuario['curso_id']);
             if (isset($curso))
                 return $curso->curso;
         }
@@ -100,7 +100,7 @@ class ControladorUsuário extends Controller
         $usuario = User::find($id);
         if (isset($usuario))
         {
-            $formaIngresso = TicketForm::find($formaIngresso['forma_ingresso_id']);
+            $formaIngresso = formas_ingresso::find($usuario['forma_ingresso_id']);
             if (isset($formaIngresso))
                 return $formaIngresso->forma_ingresso;
         }

@@ -1,6 +1,6 @@
 <?php use App\Http\Controllers\ControladorUsuário; ?>
 
-@extends('layout.app', ["current" => "usuarios"])
+@extends('layouts.app', ["current" => "user/usuarios"])
 
 @section('body')
 <div class="card border">
@@ -19,7 +19,6 @@
                     <th>Forma_Ingresso</th>
                     <th>Curso</th>
                     <th>Status</th>
-                    <th>Senha</th>
                     <th>Ações</th>
                 </tr>
             </thead>
@@ -32,10 +31,9 @@
                     <td>{{$user->email}}</td>
                     <td>{{$user->sexo}}</td>
                     <td>{{$user->raca}}</td>
-                    <td>{{ ControladorFormaIngresso::getTicketForm($user['id']) }}</td>
-                    <td>{{ ControladorUsuário::getCourseName($user['id']) }}</td>
+                    <td>{{ ControladorUsuário::getTicketForm($user->id) }}</td>
+                    <td>{{ ControladorUsuário::getCourseName($user->id) }}</td>
                     <td>{{$user->status}}</td>
-                    <td>{{$user->senha}}</td>
                     <td>
                         <a href="{{ route('usuarios.edit', $user['id']) }}" class="btn btn-sm btn-primary">Editar</a>
 

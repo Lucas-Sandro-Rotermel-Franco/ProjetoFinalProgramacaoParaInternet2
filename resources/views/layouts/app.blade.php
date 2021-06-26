@@ -79,5 +79,13 @@
             @yield('content')
         </main>
     </div>
+
+    <div class=”container”>
+        <main role="main">
+            @hasSection('body')
+            @yield('body')
+            @endif
+        </main>
+    </div>
 </body>
 </html>
