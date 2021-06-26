@@ -27,8 +27,8 @@
                 <label for="racaUsuario">Raça</label>
                 <input type="text" class="form-control" name="racaUsuario" id="racaUsuario" placeholder="Raça">
 
-                <label for="forma_ingresso_idUsuario">Forma de Ingresso</label>
-                <input type="text" class="form-control" name="forma_ingresso_idUsuario" id="forma_ingresso_idUsuario" placeholder="Forma de ingresso">
+                <label for="forma_ingresso_id">Forma de Ingresso</label>
+                <input type="text" class="form-control" name="forma_ingresso_id" id="forma_ingresso_id" placeholder="Forma de ingresso">
 
                 <label for="curso_idUsuario">Curso</label>
                 <input type="text" class="form-control" name="curso_idUsuario" id="curso_idUsuario" placeholder="Curso">

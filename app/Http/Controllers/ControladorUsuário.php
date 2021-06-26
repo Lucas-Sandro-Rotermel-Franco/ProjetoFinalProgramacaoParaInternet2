@@ -12,7 +12,7 @@ class ControladorUsuário extends Controller
     public function index()
     {
         $usuarios = User::all();
-
+        Log::info('Teste');
         return view('user/usuarios', compact('usuarios'));
     }
 
@@ -31,7 +31,7 @@ class ControladorUsuário extends Controller
         $usuario->email = $request->input('emailUsuario');
         $usuario->sexo = $request->input('sexoUsuario');
         $usuario->raca = $request->input('racaUsuario');
-        $usuario->forma_ingresso_id = $request->input('forma_ingresso_idUsuario');
+        $usuario->forma_ingresso_id = $request->input('forma_ingresso_id');
         $usuario->curso_id = $request->input('curso_idUsuario');
         $usuario->status = $request->input('statusUsuario');
 
@@ -63,7 +63,7 @@ class ControladorUsuário extends Controller
             $usuario->email = $request->input('emailUsuario');
             $usuario->sexo = $request->input('sexoUsuario');
             $usuario->raca = $request->input('racaUsuario');
-            $usuario->forma_ingresso_id = $request->input('forma_ingresso_idUsuario');
+            $usuario->forma_ingresso_id = $request->input('forma_ingresso_id');
             $usuario->curso_id = $request->input('curso_idUsuario');
             $usuario->status = $request->input('statusUsuario');
 
