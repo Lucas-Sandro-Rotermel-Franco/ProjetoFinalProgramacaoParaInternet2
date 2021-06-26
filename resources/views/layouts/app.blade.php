@@ -81,6 +81,8 @@
     </div>
 
     <div class=”container”>
+        @component('navbar_comp', ["current" => $current ?? ""])
+        @endcomponent
         <main role="main">
             @hasSection('body')
             @yield('body')
