@@ -12,7 +12,6 @@ class ControladorUsuário extends Controller
     public function index()
     {
         $usuarios = User::all();
-        Log::info('Teste');
         return view('user/usuarios', compact('usuarios'));
     }
 
@@ -43,9 +42,13 @@ class ControladorUsuário extends Controller
     public function edit($id)
     {
         $usuario = User::find($id);
+        $cursos = cursos::pluck('curso', 'id');
+        $formas_ingresso = formas_ingresso::pluck('forma_ingresso', 'id');
+        $selectedIDIngresso = $usuario->forma_ingresso_id;
+        $selectedIDCurso = $usuario->curso_id;
         if (isset($usuario))
         {
-            return view('user/editarusuario', compact('usuario'));
+            return view('user/editarusuario', compact(['usuario'], ['cursos'], ['formas_ingresso'], ['selectedIDIngresso'], ['selectedIDCurso']));
         }
 
         return redirect('/usuarios');
